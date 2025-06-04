@@ -7,7 +7,9 @@ global:
   local:
     export:
     - hostname: search.mesh.global
+      ports: [80]
     - hostname: payments.mesh.global
+      ports: [80]
   remote:
   - mesh: east-mesh
     addresses:
