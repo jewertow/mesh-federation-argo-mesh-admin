@@ -1,6 +1,14 @@
 global:
-  configNamespace: istio-config
-  meshes:
+  configNamespace: istio-system
+  defaultServicePorts:
+  - number: 80
+    name: http
+    protocol: HTTP
+  local:
+    export:
+    - hostname: search.mesh.global
+    - hostname: payments.mesh.global
+  remote:
   - mesh: east-mesh
     addresses:
     - 1.1.1.1
