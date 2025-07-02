@@ -3,6 +3,11 @@ global:
   - number: 9080
     name: http
     protocol: HTTP
+  egressGateway:
+    enabled: true
+    selector:
+      istio: istio-egressgateway
+    port: 443
   remote:
   - mesh: east-mesh
     addresses:
