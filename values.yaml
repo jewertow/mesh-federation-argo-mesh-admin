@@ -6,3 +6,6 @@ global:
   local:
     export:
     - hostname: ratings.mesh.global
+      # TODO: template should take defaultServicePorts if ports is not defined
+      ports:
+      - 9080
