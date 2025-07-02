@@ -1,0 +1,8 @@
+global:
+  defaultServicePorts:
+  - number: 9080
+    name: http
+    protocol: HTTP
+  local:
+    export:
+    - hostname: ratings.mesh.global
