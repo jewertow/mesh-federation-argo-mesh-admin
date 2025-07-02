@@ -1,16 +1,14 @@
 global:
-  configNamespace: istio-system
-  local:
-    export:
-    - hostname: httpbin-service.mesh.global
-      ports:
-      - 8000
-      - 9000
+  defaultServicePorts:
+  - number: 9080
+    name: http
+    protocol: HTTP
   remote:
   - mesh: east-mesh
     addresses:
     - console-openshift-console.apps.east.servicemesh.devcluster.openshift.com
     port: 443
     network: east-network
-    locality: us-east1
-
+    locality: us-east-2
+    importedServices:
+    - ratings.mesh.global
