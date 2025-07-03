@@ -3,12 +3,10 @@ global:
   - number: 9080
     name: http
     protocol: HTTP
-  remote:
-  - mesh: east-mesh
-    addresses:
-    - console-openshift-console.apps.east.servicemesh.devcluster.openshift.com
-    port: 443
-    network: east-network
-    locality: us-east-2
-    importedServices:
-    - ratings.mesh.global
+  useOpenshiftRouter: true
+  local:
+    export:
+    - hostname: details.mesh.global
+      # TODO: template should take defaultServicePorts if ports is not defined
+      ports:
+      - 9080
