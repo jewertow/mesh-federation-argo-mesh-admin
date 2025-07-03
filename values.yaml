@@ -10,6 +10,3 @@ global:
       # TODO: template should take defaultServicePorts if ports is not defined
       ports:
       - 9080
-    - hostname: details.mesh.global
-      ports:
-      - 9080
