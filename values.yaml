@@ -17,6 +17,7 @@ global:
     locality: us-east-2
     importedServices:
     - ratings.mesh.global
+    - details.mesh.global
   - mesh: west-mesh
     addresses:
     - console-openshift-console.apps.west.servicemesh.devcluster.openshift.com
