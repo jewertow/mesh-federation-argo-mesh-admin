@@ -17,3 +17,11 @@ global:
     locality: us-east-2
     importedServices:
     - ratings.mesh.global
+  - mesh: west-mesh
+    addresses:
+    - console-openshift-console.apps.west.servicemesh.devcluster.openshift.com
+    port: 443
+    network: west-network
+    locality: us-east-2
+    importedServices:
+    - details.mesh.global
