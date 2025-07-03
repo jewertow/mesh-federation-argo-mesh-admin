@@ -3,6 +3,7 @@ global:
   - number: 9080
     name: http
     protocol: HTTP
+  useOpenshiftRouter: true
   local:
     export:
     - hostname: ratings.mesh.global
