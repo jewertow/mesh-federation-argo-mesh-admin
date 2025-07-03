@@ -8,6 +8,7 @@ global:
     selector:
       istio: istio-egressgateway
     port: 443
+  useOpenshiftRouter: true
   remote:
   - mesh: east-mesh
     addresses:
