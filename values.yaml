@@ -14,7 +14,6 @@ global:
     - console-openshift-console.apps.east.servicemesh.devcluster.openshift.com
     port: 443
     network: east-network
-    locality: us-east-2
     importedServices:
     - ratings.mesh.global
   - mesh: west-mesh
@@ -22,7 +21,6 @@ global:
     - console-openshift-console.apps.west.servicemesh.devcluster.openshift.com
     port: 443
     network: west-network
-    locality: us-east-2
     importedServices:
     - details.mesh.global
     - ratings.mesh.global
