@@ -3,11 +3,12 @@ global:
   - number: 9080
     name: http
     protocol: HTTP
-  egressGateway:
-    enabled: true
-    selector:
-      app: istio-egressgateway
-  useOpenshiftRouter: true
+  enableGatewayAPI: true
+  enableOpenshiftRouter: true
+  gateways:
+    egress:
+      enabled: true
+      port: 443
   remote:
   - mesh: east-mesh
     addresses:
